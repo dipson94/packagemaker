@@ -1,5 +1,5 @@
-# packagemaker
-A simple tool for packahing python
+# template_pypackage_builder
+A simple tool for packaging python
 ## Table of Contents
     
 - [Description](#description)
@@ -19,11 +19,19 @@ This tool walks you through the process of python packaging. Well it doesnot cre
 * main function to initial package building from scratch 
 
 ## Installation
-Install from git
+
+Install from pypi
+
+```
+pip install template-pypackage-builder 
+```
+
+Install from GitHub
 
 ```
 pip install git+https://github.com/dipson94/packagemaker
 ```
+
 #### Install requires
 
 * pkg_resources
@@ -35,13 +43,13 @@ pip install git+https://github.com/dipson94/packagemaker
 Direct function from packages. USe main function to start initial package build.
 
 ```
-import packagemaker as pm
-pm.main()
+import template_pypackage_builder as pb
+pb.main()
 ```
 Use pip_code() function to generate pip code to install package from subdirectory of github repo
 ```
-import packagemaker as pm
-pm.pip_code()
+import template_pypackage_builder as pb
+pb.pip_code()
 ```
 ### Additional notes on package Building
 Additional info about package building
@@ -104,7 +112,11 @@ Here we are importing functions directly to main `__init__.py` file, so the func
 **Final thoughts**
 
 packagemaker only helps with making a template or initial structure of a package. For making better package work on the file manually using the editor.
+
 ## Author
+
 Dipson
+
 ## License
+
 GNU GPL V3
