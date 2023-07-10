@@ -110,20 +110,20 @@ def readme():
     s="# "+package_name+"\n"+breif+"\n"
     s=s+"""## Table of Contents
     
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [Author](#author)
-    - [License](#license)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Author](#author)
+- [License](#license)
     
-    ## Description
-    """+note+"\n## Installation\n"+install_description+"\n\n```"+install_cmd+"```\n#### Install requires\n"
+## Description
+    """+note+"\n## Installation\n"+install_description+"\n\n```\n"+install_cmd+"\n```\n#### Install requires\n\n"
     for i in install_require:
-        s=s+i+"\n"
+        s=s+i+"\n\n"
     s=s+"## Usage\n"
     for idx,x in enumerate(usage_cmds):
         s=s+usage_note[idx]+"\n\n"
-        s=s+"```"+x+"```\n"
+        s=s+"```\n"+x+"\n```\n"
     s=s+"## Author\n"+author_name+"\n"+"## License\n"+license
     print("\n------------------------------------------------------------------\n") 
     return s
@@ -233,7 +233,7 @@ def setup():
     """)
     pythonrequires=str(input("enter version :"))
     
-    s='''from setuptools import find_packages, setup
+    s='''from setuptools import setup
     
     with open("'''
     s=s+readme+'''", "r") as f:
