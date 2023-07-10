@@ -76,7 +76,7 @@ The following is the tree structure of a package showing basic files and directo
             │   └── module_2.py
             └── module_3
                 ├── __init__.py
-                └── module_3.p
+                └── module_3.py
 ```
 
 
