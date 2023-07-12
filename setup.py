@@ -3,7 +3,7 @@ with open("README.md", "r") as f:
     long_description = f.read()
 setup(
     name="template_pypackage_builder",
-    version="0.7",
+    version="0.9",
     description="A simple tool for packaging python",
     package_dir={"": "src"},
     include_package_data=True,

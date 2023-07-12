@@ -34,7 +34,7 @@ Select the type of the license from the following
         """))
     file=["GNU GPLv3","MIT License","Apache Version 2.0","Mozilla Public License 2.0","The Unlicense","user_defined"][x-1]
     import pkg_resources
-    relativepath=pkg_resources.resource_filename("packagemaker", "types")
+    relativepath=pkg_resources.resource_filename("template_pypackage_builder", "types")
     path=relativepath+"/"+file+".txt"
     if x==6:
         path=str(input("enter path to custon License file : "))
@@ -232,6 +232,39 @@ def setup():
     
     """)
     pythonrequires=str(input("enter version :"))
+    consol=[]
+    if str(input("""
+    
+    Do you want to run certain functions of the 
+    module directly in console (in terminal) 
+    with user defined keywords (would use this
+    keywords directly in terminal to call function)
+    (y/n)?     
+    
+    """))=="y":
+    	print("""
+    -----------------------------------------------.
+    | Example                                      |
+    ------------------------------------------------
+    | userdef_keywrd = module_name : function_name |
+    ------------------------------------------------
+    | (enter each line one by one)                 |
+    ------------------------------------------------
+    
+    if function is inside submodule then
+    
+    userdef_keywrd = module_name : sub_module_name :function_name
+    
+    Always give unique keyword and make sure it doesnot
+    conflicts with other commands
+    
+    
+    	""")
+    while True:
+            x=str(input("enter console data : "))
+            if x=="":
+                break
+            consol.append(x)
     
     s='''from setuptools import setup
     
@@ -286,6 +319,13 @@ def setup():
         exr=exr[:-1]+']'
         s=s+exr+'''
                 },'''
+    if len(consol)!=0:
+        s=s+"""
+        entry_points={
+        'console_scripts': ["""
+        for i in consol:
+            s=s+"'"+i+"',"
+        s=s+"""],},"""
     if pythonrequires!="":
         s=s+'''
         python_requires="'''+pythonrequires+'''",'''
@@ -358,7 +398,7 @@ def main():
 -----------------------------------------------------------------
 
 """)
-    if str(input("\nDo you wish to continue (y/n) ?"))!="y":
+    if str(input("\nDo you wish to continue (y/n) ? "))!="y":
        return 0
     print("\n")
     ls=license()
