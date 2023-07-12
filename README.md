@@ -51,6 +51,19 @@ Use pip_code() function to generate pip code to install package from subdirector
 import template_pypackage_builder as pb
 pb.pip_code()
 ```
+Alternatively use key words pysetup and gitpip directly in terminal to execute the main and pip_code functions respectively
+
+```
+pysetup
+
+```
+
+
+```
+gitpip
+
+```
+
 ### Additional notes on package Building
 Additional info about package building
 
