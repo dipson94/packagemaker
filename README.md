@@ -40,7 +40,7 @@ pip install git+https://github.com/dipson94/packagemaker
 
 ## Usage
 
-Direct function from packages. USe main function to start initial package build.
+Direct function from packages. Use main function to start initial package build.
 
 ```
 import template_pypackage_builder as pb
@@ -74,7 +74,7 @@ import pkg_resources
 relative_path=pkg_resources.resource_filename("packagemaker", "types")
 ```
 This command is used if you want to use the path inside package in site-packages folder. Otherwise the path will be relative to the directory where you imported the package (while programming after importing the module).
-Here relative_path refers to the path to types folder inside installed package packagemaker.
+Here relative_path refers to the path to types folder inside installed package template_pypackage_builder.
 
 **`__init__.py` file handeling**
 
@@ -123,7 +123,7 @@ Here we are importing functions directly to main `__init__.py` file, so the func
 
 **Final thoughts**
 
-packagemaker only helps with making a template or initial structure of a package. For making better package work on the file manually using the editor.
+template_pypackage_builder only helps with making a template or initial structure of a package. For making better package, work on the files manually using the editor.
 
 ## Author
 
