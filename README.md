@@ -53,15 +53,14 @@ pb.pip_code()
 ```
 Alternatively use key words pysetup and gitpip directly in terminal to execute the main and pip_code functions respectively
 
+@terminal
 ```
 pysetup
-
 ```
 
-
+@terminal
 ```
 gitpip
-
 ```
 
 ### Additional notes on package Building
