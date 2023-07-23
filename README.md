@@ -1,29 +1,30 @@
-# template_pypackage_builder
-A simple tool for packaging python
+# pypkg-builder
+
+A simple GUI based tool for packaging python.
+
+**(formally template-pypackage-builder)
+
 ## Table of Contents
-    
+
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Author](#author)
 - [License](#license)
-    
 ## Description
-This tool walks you through the process of python packaging. Well it doesnot create actual package, more like a template with initial files to start with. The tool conatin following functions to help with package deployment.
+This tool walks you through the process of python packaging. Well it doesn't create actual package, more like a template with initial files to start with. The tool conatin following functions to help with package deployment.
 
 * README maker
 * LIcense creater
 * setup file creater
 * directory tree builder
-* pip code generater to install package from subdirectory of github repo
-* main function to initial package building from scratch 
 
 ## Installation
 
 Install from pypi
 
 ```
-pip install template-pypackage-builder 
+pip install pypkg-builder
 ```
 
 Install from GitHub
@@ -36,34 +37,31 @@ pip install git+https://github.com/dipson94/packagemaker
 
 * pkg_resources
 * pyperclip
-* os
+* flask
+* datetime
 
 ## Usage
-
-Direct function from packages. Use main function to start initial package build.
-
-```
-import template_pypackage_builder as pb
-pb.main()
-```
-Use pip_code() function to generate pip code to install package from subdirectory of github repo
-```
-import template_pypackage_builder as pb
-pb.pip_code()
-```
-Alternatively use key words pysetup and gitpip directly in terminal to execute the main and pip_code functions respectively
 
 @terminal
 ```
 pysetup
 ```
 
-@terminal
+then this will appear on terminal
+
 ```
-gitpip
+* Serving Flask app 'pypkg_builder.app'
+* Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+* Running on http://127.0.0.1:5000
 ```
 
+either click on the link or go to browser and type address http://127.0.0.1:5000.
+
+(Note that the address might change(least likely happens) if the port is not available)
+
 ### Additional notes on package Building
+
 Additional info about package building
 
 **including path**
@@ -74,7 +72,7 @@ import pkg_resources
 relative_path=pkg_resources.resource_filename("packagemaker", "types")
 ```
 This command is used if you want to use the path inside package in site-packages folder. Otherwise the path will be relative to the directory where you imported the package (while programming after importing the module).
-Here relative_path refers to the path to types folder inside installed package template_pypackage_builder.
+Here relative_path refers to the path to types folder inside installed package pypkg-builder.
 
 **`__init__.py` file handeling**
 
@@ -123,7 +121,7 @@ Here we are importing functions directly to main `__init__.py` file, so the func
 
 **Final thoughts**
 
-template_pypackage_builder only helps with making a template or initial structure of a package. For making better package, work on the files manually using the editor.
+pypkg-builder only helps with making a template or initial structure of a package. For making better package, work on the files manually using the editor.
 
 ## Author
 
