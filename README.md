@@ -60,6 +60,9 @@ either click on the link or go to browser and type address http://127.0.0.1:5000
 
 (Note that the address might change(least likely happens) if the port is not available)
 
+![pypkg](https://github.com/dipson94/packagemaker/assets/123653581/18409ead-38eb-4727-b762-b5d8161ccb87)
+
+
 ### Additional notes on package Building
 
 Additional info about package building
